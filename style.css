@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+#back {
+  width: 99.9%;
+  height: 99vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* #img-con {
+  width: 50%;
+  height: 90%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+#back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#top {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #9999996e; */
+  /* background-color: #000000d8; */
+}
+#working-area {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  max-width: 1920px;
+}
+#nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 0px;
+}
+#left-side,
+#right-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+a {
+  font-size: 15px;
+  pointer-events: all;
+  text-decoration: none;
+  color: white;
+}
+#nav img {
+  height: 45px;
+}
+#hero {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translate(0%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#left-hero {
+  min-width: 50%;
+}
+.elem {
+  position: relative;
+  height: 6.6vw;
+  overflow: hidden;
+}
+.elem h1:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.elem h1 {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: white;
+  line-height: 0.85;
+  font-weight: 100;
+  font-family: "kajiro";
+  font-size: 9vw;
+}
+#left-hero button {
+  pointer-events: all;
+  padding: 0.5vw 1vw;
+  letter-spacing: 1px;
+  font-family: "kajiro";
+  margin-top: 1.5vw;
+  font-size: 2.5vw;
+}
+#right-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 20%;
+  color: white;
+}
+#right-hero p {
+  /* margin-bottom: 20px; */
+  text-align: right;
+  font-weight: 250;
+  font-size: 13px;
+}
+#imgdiv {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100px;
+  /* background-color: white; */
+  background-image: url(https://images.unsplash.com/photo-1529824140359-0c888b4aff69?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8eW9uYSUyMG9mJTIwdGhlJTIwZGF3bnxlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+#right-hero p:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  #back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #working-area {
+    width: 100%;
+  }
+  #nav {
+    padding: 12px 25px;
+  }
+  #hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    top: 62%;
+  }
+  #left-hero {
+    min-width: 70%;
+    padding-left: 20px;
+  }
+  .elem {
+    height: 15vw;
+    /* background-color: red; */
+  }
+  .elem h1 {
+    font-size: 20vw;
+  }
+  #right-hero {
+    overflow: hidden;
+    align-items: flex-start;
+    padding-left: 20px;
+    width: 90%;
+  }
+  #right-hero p {
+    color: black;
+    text-align: left;
+    font-weight: 250;
+    font-size: 3vw;
+  }
+  #imgdiv {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 30%;
+    height: 70px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 849px) {
+  #working-area {
+    width: 100%;
+  }
+  #nav {
+    padding: 12px 25px;
+  }
+  #hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    top: 62%;
+  }
+  #left-hero {
+    min-width: 30%;
+    padding-left: 20px;
+  }
+  .elem {
+    height: 6.6vw;
+  }
+  #right-hero {
+    align-items: flex-start;
+    padding-left: 20px;
+    width: 30%;
+  }
+  #right-hero p {
+    color: black;
+    text-align: left;
+    font-weight: 250;
+    font-size: 1.8vw;
+  }
+  #imgdiv {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 60%;
+    height: 70px;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1150px) {
+  #working-area {
+    width: 100%;
+  }
+  #nav {
+    padding: 12px 25px;
+  }
+  #hero {
+    top: 50%;
+  }
+  #left-hero {
+    align-self: center;
+    min-width: 30%;
+    padding-left: 20px;
+  }
+  .elem {
+    height: 6.6vw;
+  }
+  #right-hero {
+    padding-right: 20px;
+    width: 15%;
+  }
+  #right-hero p {
+    font-weight: 250;
+    font-size: 13px;
+  }
+  #imgdiv {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 60%;
+    height: 70px;
+  }
+}
